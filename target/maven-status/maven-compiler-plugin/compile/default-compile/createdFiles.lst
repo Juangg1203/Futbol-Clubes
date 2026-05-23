@@ -1,0 +1,15 @@
+com\quiz\futbol\entity\Competicion.class
+com\quiz\futbol\entity\Entrenador.class
+com\quiz\futbol\repository\JugadorRepository.class
+com\quiz\futbol\repository\EntrenadorRepository.class
+com\quiz\futbol\DataLoader.class
+com\quiz\futbol\QuizApplication.class
+com\quiz\futbol\entity\Asociacion.class
+com\quiz\futbol\repository\ClubCompeticionRepository.class
+com\quiz\futbol\entity\ClubCompeticion.class
+com\quiz\futbol\entity\Club.class
+com\quiz\futbol\repository\ClubRepository.class
+com\quiz\futbol\entity\Jugador.class
+com\quiz\futbol\controller\FutbolController.class
+com\quiz\futbol\repository\AsociacionRepository.class
+com\quiz\futbol\repository\CompeticionRepository.class
