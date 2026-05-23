@@ -840,7 +840,8 @@ Guardar
 
 <script>
 
-const BASE = window.location.origin;
+const API = "http://localhost:8107/api";
+fetch(`${API}/${entity}`)
 
 let currentPage='clubes';
 let editingId=null;
