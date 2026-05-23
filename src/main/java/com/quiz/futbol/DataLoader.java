@@ -36,6 +36,12 @@ public class DataLoader implements CommandLineRunner {
     @jakarta.transaction.Transactional
     public void run(String... args) {
 
+        // ✅ Solo cargar datos si la BD está vacía (evita duplicados en cada reinicio)
+        if (asociacionRepository.count() > 0) {
+            System.out.println("✅ Datos ya existentes, omitiendo DataLoader.");
+            return;
+        }
+
         // 1. Asociacion
         Asociacion fcf = new Asociacion();
         fcf.setNombre("Federación Colombiana de Fútbol");
@@ -122,7 +128,6 @@ public class DataLoader implements CommandLineRunner {
         clubCompeticionRepository.save(cc4);
 
         System.out.println("✅ Datos de prueba cargados correctamente.");
-        System.out.println("📌 H2 Console: http://localhost:8107/h2-console  |  JDBC URL: jdbc:h2:mem:futboldb");
-        System.out.println("🔗 API: http://localhost:8107/api/clubes");
+        System.out.println("🔗 API: /api/clubes");
     }
 }
