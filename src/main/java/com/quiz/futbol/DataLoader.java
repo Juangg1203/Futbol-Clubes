@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-//@Component   ← comenta esta línea
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final AsociacionRepository asociacionRepository;
