@@ -840,8 +840,7 @@ Guardar
 
 <script>
 
-const API = "http://localhost:8107/api";
-fetch(`${API}/${entity}`)
+const BASE = "http://localhost:8107/api";
 
 let currentPage='clubes';
 let editingId=null;
@@ -855,7 +854,7 @@ const pages=[
 ];
 
 function ep(e){
-return '/api/'+e;
+  return '/' + e;
 }
 
 function showPage(name){
@@ -897,7 +896,7 @@ tbody.innerHTML=`
 
 try{
 
-const res=await fetch(BASE+ep(entity));
+const res = await fetch(BASE + ep(entity));
 
 if(!res.ok){
 throw new Error('HTTP '+res.status);
